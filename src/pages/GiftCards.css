@@ -1,0 +1,138 @@
+.page-giftcards {
+    padding: 4rem 0;
+}
+
+.gift-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.gift-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
+    margin-bottom: 5rem;
+}
+
+.gift-card-option {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-visual {
+    width: 300px;
+    height: 190px;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.card-visual.physical {
+    background: linear-gradient(135deg, var(--color-primary), #004d2e);
+    color: black;
+}
+
+.card-visual.digital {
+    background: linear-gradient(135deg, var(--color-secondary), #662b00);
+    color: white;
+}
+
+.logo-text {
+    font-weight: 900;
+    letter-spacing: -1px;
+    font-size: 1.5rem;
+}
+
+.card-chip {
+    width: 40px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.card-val {
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-align: right;
+    opacity: 0.8;
+}
+
+.option-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    text-align: left;
+    width: 100%;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.availability-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.balance-checker {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-lg);
+}
+
+.balance-checker h2 {
+    margin-bottom: 1.5rem;
+}
+
+.balance-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.balance-form input {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    outline: none;
+}
+
+.btn-check {
+    padding: 0.75rem 1.5rem;
+    background: var(--color-accent);
+    color: black;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+}

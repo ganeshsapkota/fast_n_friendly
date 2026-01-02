@@ -1,0 +1,198 @@
+/* Rewards Page Main Layout */
+.page-rewards {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.rewards-header {
+    background: linear-gradient(135deg, rgba(82, 0, 255, 0.1), rgba(0, 255, 148, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.points-display {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.points-val {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.points-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+}
+
+/* Daily Game Banner */
+.daily-game-banner {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    color: #000;
+}
+
+.game-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.game-content div h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.game-content div p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Grid Layout */
+.rewards-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+}
+
+/* Revamped Offer Cards */
+.offers-grid-revamp {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.offer-card-revamp {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-card-revamp:hover {
+    transform: translateY(-5px);
+}
+
+.offer-image-container {
+    background: #00B0FF;
+    /* Bright cyan to match screenshot */
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-image-container img {
+    max-height: 80%;
+    max-width: 80%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* Decorative background elements */
+.decor-star {
+    position: absolute;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+}
+
+.star-1 {
+    top: 10px;
+    left: 10px;
+    transform: rotate(-15deg);
+}
+
+.star-2 {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg);
+}
+
+.offer-content {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    color: #333;
+    /* Dark text for white card */
+}
+
+.offer-content h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.points-badge {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-redeem {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #003366;
+    /* Dark blue */
+    color: #003366;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+.btn-redeem:hover {
+    background: #003366;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .rewards-grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .daily-game-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .offers-grid-revamp {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

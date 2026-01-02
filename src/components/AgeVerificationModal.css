@@ -1,0 +1,120 @@
+.age-gate-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    background-image: radial-gradient(circle at center, rgba(20, 20, 20, 0.9) 0%, #000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2147483647;
+    /* Max Z-Index to ensure it's on top */
+    backdrop-filter: blur(15px);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.age-gate-modal {
+    background: rgba(30, 30, 30, 0.6);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* premium border glow effect */
+.age-gate-modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.age-gate-icon {
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 148, 0.4));
+}
+
+.age-gate-modal h2 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.age-gate-modal p {
+    color: #a0a0a0;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.age-gate-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn-age-yes {
+    background: var(--color-primary);
+    color: black;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 255, 148, 0.3);
+}
+
+.btn-age-yes:hover {
+    background: #00ffaa;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 148, 0.5);
+}
+
+.btn-age-no {
+    background: transparent;
+    color: #666;
+    padding: 1rem;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-age-no:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

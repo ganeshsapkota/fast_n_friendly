@@ -1,0 +1,186 @@
+.page-deli {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+    /* Match reference serif style */
+    padding-top: 80px;
+    /* Space for fixed navbar */
+}
+
+/* Header */
+.deli-header {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.deli-title {
+    font-size: 4rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Feature Sections (Zig-Zag) */
+.deli-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 10%;
+    gap: 4rem;
+}
+
+/* Alternating layout happens via JSX structure or nth-child here */
+/* But easiest is to handle in grid/flex direction */
+
+.deli-image-container {
+    flex: 1;
+    max-width: 600px;
+}
+
+.deli-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.deli-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.deli-subtitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+}
+
+.deli-text {
+    font-family: 'Arial', sans-serif;
+    /* Body text is usually sans-serif */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Nutrition Grid */
+.deli-nutrition {
+    background-color: #111;
+    padding: 4rem 10%;
+    margin-top: 4rem;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nutrition-item {
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.5rem;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.95rem;
+}
+
+.nutrition-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #fff;
+}
+
+.nutrition-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.nutrition-calories {
+    float: right;
+    font-weight: bold;
+}
+
+.nutrition-details {
+    color: #ddd;
+    line-height: 1.4;
+}
+
+.contains-text {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+/* Footer */
+.deli-footer {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #000;
+}
+
+.contact-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-contact {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border: 1px solid #444;
+    transition: all 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #444;
+    border-color: #666;
+}
+
+.copyright {
+    margin-top: 4rem;
+    font-size: 0.8rem;
+    color: #666;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .deli-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 5%;
+        gap: 2rem;
+    }
+
+    .deli-section.reverse {
+        flex-direction: column-reverse;
+        /* Ensure consistent text flow mobile */
+    }
+
+    .deli-title {
+        font-size: 3rem;
+    }
+
+    .nutrition-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

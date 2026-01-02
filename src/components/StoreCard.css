@@ -1,0 +1,111 @@
+.store-check-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.store-check-card:hover {
+    background: var(--bg-card-hover);
+}
+
+.store-check-card.selected {
+    border-color: var(--color-primary);
+    background: rgba(0, 255, 148, 0.05);
+}
+
+.store-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.store-header h3 {
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+}
+
+.distance-badge {
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    background: rgba(0, 255, 148, 0.1);
+    padding: 0.1rem 0.4rem;
+    border-radius: var(--radius-sm);
+}
+
+.store-address {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.store-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.details-link {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.75rem;
+    transition: opacity 0.2s;
+}
+
+.details-link:hover {
+    text-decoration: underline;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.services-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    font-size: 0.7rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+}
+
+.store-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.btn-directions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: white;
+    color: black;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.btn-directions:hover {
+    opacity: 0.9;
+}
