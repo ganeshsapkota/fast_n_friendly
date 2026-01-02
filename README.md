@@ -1,4 +1,5 @@
-# React + Vite
+# Fast N Friendly
+![Deploy Status](https://github.com/ganeshsapkota/fast_n_friendly/actions/workflows/deploy.yml/badge.svg)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
